@@ -34,8 +34,12 @@ public class CalculatorController {
         return calculatorService.multiply(num1, num2);
     }
     @GetMapping("/devide")
-    public String devide(@RequestParam int num1, @RequestParam int num2) {
-        return calculatorService.devide(num1, num2);
+    public String divide(@RequestParam int num1, @RequestParam int num2) {
+        if (num2 == 0) {
+            return "На 0 делить нельзя";
+        }
+        return calculatorService.divide(num1, num2);
     }
+
 }
 

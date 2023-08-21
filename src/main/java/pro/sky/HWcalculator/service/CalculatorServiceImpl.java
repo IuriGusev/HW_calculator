@@ -13,17 +13,18 @@ public class CalculatorServiceImpl implements CalculatorService {
         int result = num1+num2;
         return num1 + " + "  + num2 + " = " + result;
     }
+    @Override
     public String subtract(int num1, int num2) {
         int result = num1 - num2;
         return num1 + " - " + num2 + " = " + result;
     }
+    @Override
     public String multiply(int num1, int num2) {
         int result = num1 * num2;
         return num1 + " * " + num2 + " = " + result;
     }
-
     @Override
-    public String devide(int num1, int num2) {
+    public String divide(int num1, int num2) {
         double result = (double) num1 / num2;
         return num1 + " / " + num2 + " = " + result;
     }
