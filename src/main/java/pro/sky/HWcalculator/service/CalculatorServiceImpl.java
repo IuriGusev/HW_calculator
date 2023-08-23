@@ -10,23 +10,23 @@ public class CalculatorServiceImpl implements CalculatorService {
         return "Добро пожаловать в калькулятор";
     }
     @Override
-    public Integer plus(int num1, int num2){
-        int result = num1+num2;
-        return Integer.valueOf(num1 + " + "  + num2 + " = " + result);
+    public String plus(int num1, int num2){
+        int result = num1 + num2;
+        return num1 + " + " + num2 + " = " + result;
     }
     @Override
-    public Integer subtract(int num1, int num2) {
-        int result = num1 - num2;
-        return Integer.valueOf(num1 + " - " + num2 + " = " + result);
+    public String subtract(int num1, int num2) {
+       int result = num1 - num2;
+        return num1 + " - " + num2 + " = " + result;
     }
     @Override
-    public Integer multiply(int num1, int num2) {
+    public String multiply(int num1, int num2) {
         int result = num1 * num2;
-        return Integer.valueOf(num1 + " * " + num2 + " = " + result);
+        return num1 + " * " + num2 + " = " + result;
     }
     @Override
-    public Double divide(int num1, int num2) {
+    public String divide(Integer num1, Integer num2) {
         double result = (double) num1 / num2;
-        return Double.valueOf(num1 + " / " + num2 + " = " + result);
+        return num1 + " / " + num2 + " = " + result;
     }
 }
